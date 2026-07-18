@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Score=document.getElementById("Scoreteller")
     Final=document.getElementById("FinalScore")
     sttext=document.getElementById("intext")
-    RestartButton=document.getElementById("restart")
+    RefreshButton=document.getElementById("refresh")
 
 
     StartButton.addEventListener("click", () =>{
@@ -36,15 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
         ClickButton.classList.add("hidden");
         Timetell.classList.add("hidden");
         Final.classList.remove("hidden");
-        RestartButton.classList.remove("hidden");
+        RefreshButton.classList.remove("hidden");
         Final.textContent=`Your Average was ${sc/10} clicks per second`;
     }
-    RestartButton.addEventListener("click", () => {
+    RefreshButton.addEventListener("click", () => {
         sc=0;
         Score.textContent=`Number of Clicks:0`;
         Score.classList.add("hidden");
         Final.classList.add("hidden");
-        RestartButton.classList.add("hidden");
+        RefreshButton.classList.add("hidden");
         sttext.classList.remove("hidden");
         StartButton.classList.remove("hidden");
     });
